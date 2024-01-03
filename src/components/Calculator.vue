@@ -93,7 +93,7 @@ const clickToScreen = (num) => {
         if(num === 'posneg' && number.value.length){
             screenValue.value = Number(screenValue.value) * -1
             number.value = screenValue.value.toString().split("")
-        } else{
+        } else if (num !== 'posneg'){
             number.value.push(num)
             screenValue.value = number.value.join("")
         }
